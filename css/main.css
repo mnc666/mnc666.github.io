@@ -657,6 +657,10 @@ body::-webkit-scrollbar-track {
     background: #e6efff;
     border-radius: 100px;
 }
+::-moz-selection {
+    background-color: #3392ff2a;
+    color: unset;
+}
 ::selection {
     background-color: #3392ff2a;
     color: unset;
@@ -685,7 +689,9 @@ video,
 .katex,
 .language,
 .page-current {
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }
 b,
 strong {
