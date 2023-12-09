@@ -46,8 +46,16 @@
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
 <script type="text/javascript" src="/js/firework.js"></script>
-<!-- 雪花特效2 -->
-<script type="text/javascript" src="/js/snow2.js"></script>
+<script type="text/javascript">
+    var OriginTitile = document.title,
+        st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ? (document.title = "是微风，是晚霞，是心跳，是无可替代。——董卿", clearTimeout(st)) : (document.title =
+            "遇见仿佛是一种神奇的安排，它是一切的开始。——董卿", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
     <div id="layout">
